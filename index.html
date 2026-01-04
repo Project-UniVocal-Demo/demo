@@ -35,6 +35,7 @@
             background-color: #e8f4fc;
             padding: 8px;
             border-left: 5px solid #3498db;
+            font-weight: normal;
         }
 
         p.abstract {
@@ -106,7 +107,7 @@
         <h2>Task 1: <strong>Speech-Singing Code Switching (SCS) Synthesis</strong></h2>
         <p>In this task, <em>UniVocal</em> generates code-switching audio solely from text input. For visualization purposes, black text denotes speech parts, while <span style="color: #e74c3c;">red text</span> indicates singing parts.</p>
 
-        <h3>1. Implicit cues only: In the 'Implicit cues only' condition, <em>UniVocal</em> generates SCS audio solely based on the inherent semantic and stylistic differences between the speech and singing parts in the text.</h3>
+        <h3>1. <strong>Implicit cues only</strong>: In the 'Implicit cues only' condition, <em>UniVocal</em> generates SCS audio solely based on the inherent semantic and stylistic differences between the speech and singing parts in the text.</h3>
         <table>
             <thead>
                 <tr>
@@ -128,7 +129,7 @@
                 </tr>
                 <tr>
                     <td>3</td>
-                    <td class="text-col">My fingers ghosted over the chipped ivory keys, silent relics of songs long since played. Grandma would sit right here, her back straight, telling me stories with every note. <span style="color: #e74c3c;">Little bird, fly so high, little bird, touch the sky.</span> That was her tune for when the last autumn leaves fell, a gentle farewell to the sun. </em> <span style="color: #e74c3c;">Hwmm mmm, hwmm mmm mmm.</span> It's funny how a simple melody can hold the entire warmth of a season.</td>
+                    <td class="text-col">My fingers ghosted over the chipped ivory keys, silent relics of songs long since played. Grandma would sit right here, her back straight, telling me stories with every note. <span style="color: #e74c3c;">Little bird, fly so high, little bird, touch the sky.</span> That was her tune for when the last autumn leaves fell, a gentle farewell to the sun. <span style="color: #e74c3c;">Hwmm mmm, hwmm mmm mmm.</span> It's funny how a simple melody can hold the entire warmth of a season.</td>
                     <td><audio controls src="audios/task_empathy/implict_only/nt_audiobook_0186_0.wav"></audio></td>
                 </tr>
                 <tr>
@@ -139,7 +140,7 @@
             </tbody>
         </table>
       
-        <h3>2. Explicit cues only: In the 'Explicit cues only' condition, semantic differences between the speech and singing segments are minimized. However, transitional trigger phrases are inserted immediately preceding singing parts to guide the  <em>UniVocal</em>'s audio generation. These trigger phrases are indicated in <em>italics within the text.</em></h3>
+        <h3>2. <strong>Explicit cues only</strong>>: In the 'Explicit cues only' condition, semantic differences between the speech and singing segments are minimized. However, transitional trigger phrases are inserted immediately preceding singing parts to guide the  <em>UniVocal</em>'s audio generation. These trigger phrases are indicated in <em>italics within the text.</em></h3>
         <table>
             <thead>
                 <tr>
@@ -172,7 +173,7 @@
             </tbody>
         </table>
       
-        <h3>3. Both (Explicit + Implicit): Under the 'both' condition, the text contains both implict semantic differences and explicit trigger phrases. Trigger phrases are indicated in <em>italics within the text.</em></h3>
+        <h3>3. <strong>Both (Explicit + Implicit)</strong>>: Under the 'both' condition, the text contains both implict semantic differences and explicit trigger phrases. Trigger phrases are indicated in <em>italics within the text.</em></h3>
         <table>
             <thead>
                 <tr>
@@ -260,7 +261,7 @@
         <table>
             <thead>
                 <tr>
-                    <th style="width:5%">Style</th>
+                    <th style="width: 1%; white-space: nowrap;">Style</th>
                     <th style="width:50%">Lyrics</th>
                     <th>Audio</th>
                 </tr>
