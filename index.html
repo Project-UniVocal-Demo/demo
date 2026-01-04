@@ -69,7 +69,7 @@
         /* 文本列宽度限制 */
         td.text-col {
             width: 40%;
-            font-style: italic;
+            /*font-style: italic;*/
             font-size: 0.95em;
             color: #555;
         }
@@ -93,118 +93,118 @@
 </head>
 <body>
 
-    <h1>Demo Page for Audio Generation Tasks</h1>
+    <h1>Demo Page for Univocal</h1>
     
     <p class="abstract">
-        <strong>Abstract:</strong> This page presents the audio samples for our submitted paper. 
+        <strong>Abstract:</strong> This page presents the audio samples for our submitted paper: <strong><em>UniVocal</em>: Unified Speech-Singing Code-Switching Synthesis</strong>. 
         It demonstrates the performance of our proposed method across three different tasks: 
-        Style Control Synthesis (SCS), Textual Empathy TTS, and Singing Voice Synthesis.
+        Speech-Singing Code Switching (SCS) Synthesis, Textual Empathy TTS, and Singing Generation.
         <br><em>Note: All samples are generated unseen during training.</em>
     </p>
 
     <section id="task1">
-        <h2>Task 1: SCS (Style Control Synthesis)</h2>
-        <p>Comparison of style control using Explicit Cues, Implicit Cues, and Both.</p>
+        <h2>Task 1: <strong>Speech-Singing Code Switching (SCS) Synthesis</strong></h2>
+        <p>In this task, <em>UniVocal</em> generates code-switching audio solely from text input. For visualization purposes, black text denotes speech parts, while <span style="color: #e74c3c;">red text</span> indicates singing parts.</p>
 
-        <h3>1. Implicit Cues</h3>
+        <h3>1. Implicit cues only: In the 'Implicit cues only' condition, <em>UniVocal</em> generates SCS audio solely based on the inherent semantic and stylistic differences between the speech and singing parts in the text.</h3>
         <table>
             <thead>
                 <tr>
                     <th>ID</th>
-                    <th>Transcript / Context</th>
+                    <th>Text Content</th>
                     <th>Audio</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
                     <td>1</td>
-                    <td class="text-col">I can still picture my grandmother in her garden, her hands deep in the dark, rich soil. She never seemed to mind the dirt under her nails; she said it was where the real magic happened. Little seed, 'neath the ground, sleep so safe and sleep so sound. That was her little charm for every bulb she planted. It was the simplest tune, but to me, it was the sound of summer.</td>
-                    <td><audio controls src="audios/audios/task_empathy/implict_only/nt_audiobook_1434_0.wav"></audio></td>
+                    <td class="text-col">I can still picture my grandmother in her garden, her hands deep in the dark, rich soil. She never seemed to mind the dirt under her nails; she said it was where the real magic happened. <span style="color: #e74c3c;">Little seed, 'neath the ground, sleep so safe and sleep so sound.</span> That was her little charm for every bulb she planted. It was the simplest tune, but to me, it was the sound of summer.</td>
+                    <td><audio controls src="audios/task_empathy/implict_only/nt_audiobook_1434_0.wav"></audio></td>
                 </tr>
                 <tr>
                     <td>2</td>
-                    <td class="text-col">I finally left the office. It's that weird, quiet time of evening when the streets are half-empty but the lights make everything feel... magical. It’s like the whole city is holding its breath. Oh, twilight hum, the day is done. Yeah. That’s the feeling. It makes the long day feel worth it, you know?</td>
-                    <td><audio controls src="audios/audios/task_empathy/implict_only/nt_monologue_1631_0.wav"></audio></td>
+                    <td class="text-col">I finally left the office. It's that weird, quiet time of evening when the streets are half-empty but the lights make everything feel... magical. It’s like the whole city is holding its breath. <span style="color: #e74c3c;">Oh, twilight hum, the day is done.</span> Yeah. That’s the feeling. It makes the long day feel worth it, you know?</td>
+                    <td><audio controls src="audios/task_empathy/implict_only/nt_monologue_1631_0.wav"></audio></td>
                 </tr>
                 <tr>
                     <td>3</td>
-                    <td class="text-col">My fingers ghosted over the chipped ivory keys, silent relics of songs long since played. Grandma would sit right here, her back straight, telling me stories with every note. Little bird, fly so high, little bird, touch the sky. That was her tune for when the last autumn leaves fell, a gentle farewell to the sun. Hwmm mmm, hwmm mmm mmm. It's funny how a simple melody can hold the entire warmth of a season.</td>
-                    <td><audio controls src="audios/audios/task_empathy/implict_only/nt_audiobook_0186_0.wav"></audio></td>
+                    <td class="text-col">My fingers ghosted over the chipped ivory keys, silent relics of songs long since played. Grandma would sit right here, her back straight, telling me stories with every note. <span style="color: #e74c3c;">Little bird, fly so high, little bird, touch the sky.</span> That was her tune for when the last autumn leaves fell, a gentle farewell to the sun. Hwmm mmm, hwmm mmm mmm. It's funny how a simple melody can hold the entire warmth of a season.</td>
+                    <td><audio controls src="audios/task_empathy/implict_only/nt_audiobook_0186_0.wav"></audio></td>
                 </tr>
                 <tr>
                     <td>4</td>
-                    <td class="text-col">I was just looking through old photos and found one from that summer at the lake. The water was so bright, and I just remember feeling completely carefree, like nothing else in the world mattered. Oh sunny day, please just stay. It's funny, that simple little thought is what I remember most. Not the big events, just that one perfect, quiet moment. It's still so clear in my mind.</td>
-                    <td><audio controls src="audios/audios/task_empathy/implict_only/nt_monologue_1526_0.wav"></audio></td>
+                    <td class="text-col">I was just looking through old photos and found one from that summer at the lake. The water was so bright, and I just remember feeling completely carefree, like nothing else in the world mattered. <span style="color: #e74c3c;">Oh sunny day, please just stay.</span> It's funny, that simple little thought is what I remember most. Not the big events, just that one perfect, quiet moment. It's still so clear in my mind.</td>
+                    <td><audio controls src="audios/task_empathy/implict_only/nt_monologue_1526_0.wav"></audio></td>
                 </tr>
             </tbody>
         </table>
       
-        <h3>3. Explicit Cues</h3>
+        <h3>3. Explicit cues only: In the 'Explicit cues only' condition, semantic differences between the speech and singing segments are minimized. However, transitional trigger phrases are inserted immediately preceding singing parts to guide the  <em>UniVocal</em>'s audio generation. These trigger phrases are indicated in <em>italics within the text.</em></h3>
         <table>
             <thead>
                 <tr>
                     <th>ID</th>
-                    <th>Transcript</th>
+                    <th>Text Content</th>
                     <th>Audio</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
                     <td>1</td>
-                    <td class="text-col">The old manor's garden had been left to its own devices for years. Elara pushed aside a heavy fern, its fronds damp with morning dew. A half-forgotten lullaby surfaced in her mind, and she began to sing the words softly to the empty air: Where the moss grows green on the silent stone. The simple melody was a ghost on the breeze, a fragile connection to a time long past.</td>
-                    <td><audio controls src="audios/audios/task_empathy/emplict_only/t_audiobook_0914_0.wav"></audio></td>
+                    <td class="text-col">The old manor's garden had been left to its own devices for years. Elara pushed aside a heavy fern, its fronds damp with morning dew. A half-forgotten lullaby surfaced in her mind, <em>and she began to sing the words softly to the empty air:</em> <span style="color: #e74c3c;">Where the moss grows green on the silent stone.</span> The simple melody was a ghost on the breeze, a fragile connection to a time long past.</td>
+                    <td><audio controls src="audios/task_empathy/emplict_only/t_audiobook_0914_0.wav"></audio></td>
                 </tr>
                 <tr>
                     <td>2</td>
-                    <td class="text-col">Ugh, what a day. I swear, everything that could have gone wrong, did. The coffee machine overflowed, I missed the express train by seconds... it's just been a constant chain of little frustrations. It reminds me of a line from an old song, it went like... the universe is playing a practical joke on me. That's exactly how it feels. A big, elaborate prank. Here's hoping the punchline is that tomorrow's amazing.</td>
-                    <td><audio controls src="audios/audios/task_empathy/emplict_only/t_monologue_1184_0.wav"></audio></td>
+                    <td class="text-col">Ugh, what a day. I swear, everything that could have gone wrong, did. The coffee machine overflowed, I missed the express train by seconds... it's just been a constant chain of little frustrations. <em>It reminds me of a line from an old song, it went like...</em> <span style="color: #e74c3c;">the universe is playing a practical joke on me.</span> That's exactly how it feels. A big, elaborate prank. Here's hoping the punchline is that tomorrow's amazing.</td>
+                    <td><audio controls src="audios/task_empathy/emplict_only/t_monologue_1184_0.wav"></audio></td>
                 </tr>
                 <tr>
                     <td>3</td>
-                    <td class="text-col">I walked through the overgrown remains of my grandfather’s workshop, the air thick with the scent of sawdust and rust. He believed every object held a memory and a rhythm. He would tap a rhythm on a half-finished cabinet and start to sing the line he'd made up for it A story in the grain, a life in the wood He said it helped him find the true shape of things, to listen to what the material wanted to become.</td>
-                    <td><audio controls src="audios/audios/task_empathy/emplict_only/t_audiobook_0054_0.wav"></audio></td>
+                    <td class="text-col">I walked through the overgrown remains of my grandfather’s workshop, the air thick with the scent of sawdust and rust. He believed every object held a memory and a rhythm. <em>He would tap a rhythm on a half-finished cabinet and start to sing the line he'd made up for it</em> <span style="color: #e74c3c;">A story in the grain, a life in the wood</span> He said it helped him find the true shape of things, to listen to what the material wanted to become.</td>
+                    <td><audio controls src="audios/task_empathy/emplict_only/t_audiobook_0054_0.wav"></audio></td>
                 </tr>
                 <tr>
                     <td>4</td>
-                    <td class="text-col">I've been replaying that conversation over and over in my head. He said I was being too idealistic, that I needed to be more grounded. It's like that old indie song we used to listen to was trying to tell me something all along. I remember the exact lyric, it went... some of us are meant to chase the sun. And maybe that’s the point. Maybe chasing the sun is exactly what I'm supposed to be doing, even if it seems unrealistic to everyone else. It just feels right.</td>
-                    <td><audio controls src="audios/audios/task_empathy/emplict_only/t_monologue_1859_0.wav"></audio></td>
+                    <td class="text-col">I've been replaying that conversation over and over in my head. He said I was being too idealistic, that I needed to be more grounded. It's like that old indie song we used to listen to was trying to tell me something all along. <em>I remember the exact lyric, it went...</em> <span style="color: #e74c3c;">some of us are meant to chase the sun.</span> And maybe that’s the point. Maybe chasing the sun is exactly what I'm supposed to be doing, even if it seems unrealistic to everyone else. It just feels right.</td>
+                    <td><audio controls src="audios/task_empathy/emplict_only/t_monologue_1859_0.wav"></audio></td>
                 </tr>
             </tbody>
         </table>
       
-        <h3>3. Both (Explicit + Implicit)</h3>
+        <h3>3. Both (Explicit + Implicit): Under the 'both' condition, the text contains both implict semantic differences and explicit trigger phrases. Trigger phrases are indicated in <em>italics within the text.</em></h3>
         <table>
             <thead>
                 <tr>
                     <th>ID</th>
-                    <th>Transcript / Description</th>
+                    <th>Text Content</th>
                     <th>Audio</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
                     <td>1</td>
-                    <td class="text-col">My clearest memory is of my mother in the garden. She’d be tending the roses, a gentle look on her face, and then she would start singing softly to herself, almost a whisper. Sleep now, little one, the moonbeams kiss your eyes. It wasn't for me, not really. It was for her. A small, private moment of peace. That simple tune was the sound of my childhood, the sound of safety.</td>
+                    <td class="text-col">My clearest memory is of my mother in the garden. She’d be tending the roses, a gentle look on her face, <em>and then she would start singing softly to herself, almost a whisper.</em> <span style="color: #e74c3c;">Sleep now, little one, the moonbeams kiss your eyes.</span> It wasn't for me, not really. It was for her. A small, private moment of peace. That simple tune was the sound of my childhood, the sound of safety.</td>
                     <td><audio controls src="audios/task_empathy/both/n_audiobook_1598_0.wav"></audio></td>
                 </tr>
                 <tr>
                     <td>2</td>
-                    <td class="text-col">It's funny how the most random songs get stuck in your head, isn't it? Not the complex, award-winning stuff, but the simplest little earworms. I had one all morning, and it reminds me of that classic kids' tune that goes something like this... Shine on, little star, shine on so bright. Just that one line, over and over. It’s almost meditative in its simplicity, completely changing the rhythm of your thoughts.</td>
+                    <td class="text-col">It's funny how the most random songs get stuck in your head, isn't it? Not the complex, award-winning stuff, but the simplest little earworms. I had one all morning, <em>and it reminds me of that classic kids' tune that goes something like this...</em> <span style="color: #e74c3c;">Shine on, little star, shine on so bright.</span> Just that one line, over and over. It’s almost meditative in its simplicity, completely changing the rhythm of your thoughts.</td>
                     <td><audio controls src="audios/task_empathy/both/n_podcast_1360_0.wav"></audio></td>
                 </tr>
                 <tr>
                     <td>3</td>
-                    <td class="text-col">It’s been one of those weeks where everything just feels a little heavier, you know? I was getting so stuck in my own head, but then I remembered this silly little song my grandma used to sing. The main line is so simple, it goes... Sun's gonna shine, take it one day at a time. And just thinking about that snaps me out of it. It’s not a magic fix, but it's a start.</td>
+                    <td class="text-col">It’s been one of those weeks where everything just feels a little heavier, you know? I was getting so stuck in my own head, but then I remembered this silly little song my grandma used to sing. <em>The main line is so simple, it goes...</em> <span style="color: #e74c3c;">Sun's gonna shine, take it one day at a time.</span> And just thinking about that snaps me out of it. It’s not a magic fix, but it's a start.</td>
                     <td><audio controls src="audios/task_empathy/both/n_monologue_2669_0.wav"></audio></td>
                 </tr>
                 <tr>
                     <td>4</td>
-                    <td class="text-col">You know that feeling when you're just trying so hard to get something right, but you keep hitting the same wall? It reminds me of this little tune I'd make up when I was a kid, trying to solve a puzzle. It just went... Round and round the thought will go. And I think that's the problem, right? The thought process itself becomes the trap, and you have to find a way to step outside of it completely.</td>
+                    <td class="text-col">You know that feeling when you're just trying so hard to get something right, but you keep hitting the same wall? It reminds me of this little tune I'd make up when I was a kid, trying to solve a puzzle. <em>It just went...</em> <span style="color: #e74c3c;">Round and round the thought will go.</span> And I think that's the problem, right? The thought process itself becomes the trap, and you have to find a way to step outside of it completely.</td>
                     <td><audio controls src="audios/task_empathy/both/n_podcast_0352_0.wav"></audio></td>
                 </tr>
                 <tr>
                     <td>5</td>
-                    <td class="text-col">I ran my thumb over the faded photograph, the corners worn soft with time. It was her, sitting on the porch swing, smiling that gentle way she always did. I could almost hear her voice again, and I softly sang the words she always used to close the day. Sleep now, my darling, the moon's in the sky. Mmm-mm, mmm-mm-mmm. The memory was so vivid it almost hurt. The rest of the melody was a blur, a ghost of a tune that I could never quite grasp, so I just hummed the fragment I could still hold onto.</td>
+                    <td class="text-col">I ran my thumb over the faded photograph, the corners worn soft with time. It was her, sitting on the porch swing, smiling that gentle way she always did. I could almost hear her voice again, <em>and I softly sang the words she always used to close the day.</em> <span style="color: #e74c3c;">Sleep now, my darling, the moon's in the sky. Mmm-mm, mmm-mm-mmm.</span> The memory was so vivid it almost hurt. The rest of the melody was a blur, a ghost of a tune that I could never quite grasp, so I just hummed the fragment I could still hold onto.</td>
                     <td><audio controls src="audios/task_empathy/both/n_audiobook_0454_0.wav"></audio></td>
                 </tr>
             </tbody>
@@ -213,15 +213,15 @@
 
     <section id="task2">
         <h2>Task 2: Textual Empathy TTS</h2>
-        <p>Comparison between <strong>CosyVoice2</strong> and <strong>Univocal</strong> models.</p>
+        <p>In this task, models generates contextually appropriate empathetic speech based solely on the text content.</p>
 
         <table>
             <thead>
                 <tr>
                     <th style="width:5%">ID</th>
-                    <th style="width:35%">Transcript</th>
-                    <th style="width:30%">CosyVoice2</th>
-                    <th style="width:30%">Univocal</th>
+                    <th style="width:35%">Text Content</th>
+                    <th style="width:30%"><em>CosyVoice2</em></th>
+                    <th style="width:30%"><em>UniVocal</em></th>
                 </tr>
             </thead>
             <tbody>
@@ -254,50 +254,50 @@
     </section>
 
     <section id="task3">
-        <h2>Task 3: Singing Voice Generation</h2>
-        <p>Generated singing samples with corresponding lyrics.</p>
+        <h2>Task 3: Singing Generation</h2>
+        <p>In this task, <em>UniVocal</em> generates different styles of singing voice based on lyrics and prompts.</p>
 
         <table>
             <thead>
                 <tr>
-                    <th style="width:5%">ID</th>
+                    <th style="width:5%">Style</th>
                     <th style="width:50%">Lyrics</th>
                     <th>Audio</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <td>1</td>
+                    <td class="text-col">Rock</td>
                     <td class="text-col">Concrete towers, glass and steel.They tell you what you're supposed to feel.Headphones on to block the sound.Of voices buried in the ground.They're selling you a plastic dream.You can hear the silent scream.Flickering screen, a hollow light.Turns your daytime into night.I'm pulling at the wires in my head.Tired of the lies that I've been fed.Yeah, a storm is coming, I can feel the hum.It's time to watch the kingdom come undone.This is the static age, the final show.Gonna watch the whole damn system blow.With a rebel yell and a broken string.We're the thunder that the changes bring.Yeah, the static age is about to crack.And there ain't no turning back.</td>
                     <td><audio controls src="audios/task_singing/rock0.wav"></audio></td>
                 </tr>
                 <tr>
-                    <td>2</td>
+                    <td class="text-col">Blues</td>
                     <td class="text-col">Woke up this mornin', rain was pourin' down.Lord, I woke up this mornin', the rain was pourin' down.Got a bad feelin', a bad feelin' in this no-good town.The river's risin', hear it moanin' low.Yeah, that old muddy river, I can hear it moanin' low.Got nowhere to run to, ain't got nowhere left to go..The preacher man, he told me, \"Son, you gotta pray.\".But the devil's at my doorstep and he ain't goin' away.This water keeps on risin', wash my soul away..And I hear that thunder rollin', a sad and lonesome sound.Yeah, that thunder keeps on rollin' all across the ground.'Cause the levee's gonna break, Lord, and we're all gonna drown.Yeah, the levee's gonna break and wash away this town.</td>
                     <td><audio controls src="audios/task_singing/blues0.wav"></audio></td>
                 </tr>
                 <tr>
-                    <td>3</td>
+                    <td class="text-col">Emotional</td>
                     <td class="text-col">I'm lost out on an ocean, the waves are crashing high.The moon has hid her face behind a cold and starless sky.I've been paddling for ages, my hands are raw and sore.And I can't remember what I was fighting for.The whispers of the water say \"just let it go, give in\".It's hard to know where I end and where the waves begin.I'm shouting for a shoreline, a signal or a sign.A hope that isn't borrowed, a hope that's truly mine..'Cause every tired muscle is screaming to give way.To sink into the darkness and not face another day.But then a flicker, far away, a fragile, steady spark.A tiny pin of promise tearing through the dark..And I just need a lighthouse to tell me where to go.A single beam of guiding light to cut the undertow.I don't need you to save me, to pull me from the sea.I just need a lighthouse shining back at me.Just give me a reason to make it through the night.Oh, won't you be my lighthouse? My solitary light.</td>
                     <td><audio controls src="audios/task_singing/emotional2.wav"></audio></td>
                 </tr>
                <tr>
-                    <td>4</td>
+                    <td class="text-col">Country</td>
                     <td class="text-col">She ain't got a diamond, ain't got a fancy car.But she shines brighter than any downtown star.Got a wildflower tucked behind her ear.And a laugh that makes all my worries disappear.We sit out on the tailgate when the sun gets low.Watchin' the fireflies put on a little show.She knows the name of every constellation in the sky.And she sees the simple truth behind a complicated lie..The world keeps spinning faster, full of noise and full of greed.But all she ever tells me is that all we'll ever need.Is a little bit of honesty and a little patch of land.And the comfort of just holding someone's hand..She's my barefoot queen with a faded denim crown.The richest girl in this whole dusty town.She dances in the dirt when the crickets start to sing.And she makes me feel like I am a king.Yeah, money can't buy the kind of love she brings.My barefoot queen, you're my everything.</td>
                     <td><audio controls src="audios/task_singing/country2.wav"></audio></td>
                 </tr>
                 <tr>
-                    <td>5</td>
+                    <td class="text-col">Jazz</td>
                     <td class="text-col">Streetlights pouring liquid gold.On stories that will ne'er be told.The saxophone, a lonely sigh.Beneath a sleepy, velvet sky.You're sketching circles on the glass.As moments form and moments pass.A quiet corner, table two.There's nothing else but me and you.The clinking ice, a steady beat.To the rhythm of our tapping feet..And darling, in this hazy light.The world outside just isn't right.It's all too loud, it's all too fast.Let's make this stolen moment last.Don't say a word, just let it be.A silent, perfect poetry..We're writing rhymes in midnight ink.Slower than you'd ever think.A melody, both sweet and low.A secret only we can know.Just let the conversation fade.In this sweet serenade we've made.Let's just get lost in midnight ink.And the space between a single blink.</td>
                     <td><audio controls src="audios/task_singing/jazz0.wav"></audio></td>
                 </tr>
                 <tr>
-                    <td>6</td>
+                    <td class="text-col">Folk</td>
                     <td class="text-col">I left my boots there by the water's edge.Stood on the promises that felt like a fragile ledge.The wind it whispered through the willow trees.Carrying the scent of old, forgotten memories.My father told me, \"Son, this world is hard and cold\".So I built my walls up, did exactly as I'm told.But every stone I laid just made me feel more caged.Like an actor reading lines upon a lonely stage..And oh, the current pulls so steady and so deep.It sings a lullaby to secrets that I keep.I feel the moss beneath my feet, a truth I understand.I'm just a single grain of sand..But the river knows my name, it's heard it all before.In the steady, patient rumble and the whisper at the shore.It doesn't ask me where I'm going or where I'm coming from.It just takes my weary soul and tells me I am home.Yeah, the river knows my name and it washes me clean.</td>
                     <td><audio controls src="audios/task_singing/folk0.wav"></audio></td>
                 </tr>
                 <tr>
-                    <td>7</td>
+                    <td class="text-col">Rap</td>
                     <td class="text-col">The city's a chessboard, gotta play it with precision.Made my own decisions, fueled by lonely ambition.Every move is calculated, ain't no time for hesitation.This ain't a conversation, this a hostile coronation.They see me as a pawn, someone they can sacrifice.Didn't know I move in silence, rollin' my own dice.I learned the game from watchin' kings fall from their thrones.Built my own empire from a pile of broken bones.My circle's gettin' smaller, my vision's gettin' clearer.The crown I'm comin' for is gettin' nearer and nearer..Let 'em underestimate the moves I'm gonna make..Every piece they think they're taking is a calculated break..A sacrifice is necessary when the game is on the line..You can have the battle, but the victory is mine..This is the king's gambit, I play the long game right.Sacrifice a little darkness just to get to the light.Yeah, you can take my queen, but you can't checkmate my soul.I'm here to take control, I'm here to make you whole.Yeah, the king's gambit, watch the board rearrange.I am the agent of change, way outside your range.</td>
                     <td><audio controls src="audios/task_singing/rap2.wav"></audio></td>
                 </tr>
