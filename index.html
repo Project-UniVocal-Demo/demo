@@ -90,6 +90,46 @@
             text-align: center;
             font-size: 0.9em;
         }
+        .contour-section {
+            margin-bottom: 40px;
+        }
+        
+        .contour-container {
+            display: flex;
+            justify-content: space-between;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .contour-box {
+            flex: 1;
+            background: #fff;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .contour-box img {
+            width: 100%;
+            height: auto;
+            border: 1px solid #eaeaea;
+            display: block;
+        }
+
+        .contour-box p {
+            margin: 10px 0 5px 0;
+            font-size: 0.95em;
+            color: #2c3e50;
+            font-weight: bold;
+        }
+        
+        /* 移动端自适应：屏幕窄时将三张图垂直排列 */
+        @media (max-width: 768px) {
+            .contour-container {
+                flex-direction: column;
+            }
+        }
     </style>
 </head>
 <body>
@@ -102,7 +142,29 @@
         Speech-Singing Code Switching (SCS) Synthesis, Textual Empathy TTS, and Singing Generation.
         <br><em>Note: All samples are generated unseen during training.</em>
     </p>
-
+    
+    <section class="contour-section">
+        <h2>Pitch Contour Visualization (Refined Cent Tokens)</h2>
+        <p>
+            To demonstrate the effectiveness of our Refined Cent Tokens, we visualize the generated refined cent tokens contours against the Ground Truth (GT) cent tokens. 
+            The line charts below illustrate how Refined cent tokens draft a structural pitch framework before generating linguistic content.
+        </p>
+        <div class="contour-container">
+            <div class="contour-box">
+                <img src="images/img1.png" alt="Sample 1 F0 Comparison">
+                <p>Sample 1: GT tokens vs Generated tokens</p>
+            </div>
+            <div class="contour-box">
+                <img src="images/img2.png" alt="Sample 2 F0 Comparison">
+                <p>Sample 2: GT tokens vs Generated tokens</p>
+            </div>
+            <div class="contour-box">
+                <img src="images/img3.png" alt="Sample 3 F0 Comparison">
+                <p>Sample 3: GT tokens vs Generated tokens</p>
+            </div>
+        </div>
+    </section>
+    
     <section id="task1">
         <h2>Task 1: <strong>Speech-Singing Code Switching (SCS) Synthesis</strong></h2>
         <p>In this task, <em>UniVocal</em> generates code-switching audio solely from text input. For visualization purposes, black text denotes speech parts, while <span style="color: #e74c3c;">red text</span> indicates singing parts.</p>
